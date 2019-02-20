@@ -6,8 +6,7 @@ ENV AWSCDK_VERSION 0.24.1
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update \
-  python3 python3-dev \
-  git jq zip unzip file bash
+  python3 python3-dev
 
 #pip3 needs to be run initialy to upgrade pip
 RUN pip3 install --upgrade pip
@@ -33,4 +32,3 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda-event-sources@${AWSCDK_VERSION} \
   @aws-cdk/aws-logs@${AWSCDK_VERSION}
-  
