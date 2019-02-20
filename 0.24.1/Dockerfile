@@ -19,11 +19,13 @@ RUN pip install awscli --upgrade
 RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-amazonmq@${AWSCDK_VERSION} \
   @aws-cdk/aws-apigateway@${AWSCDK_VERSION} \
+  @aws-cdk/aws-autoscaling@${AWSCDK_VERSION} \
   @aws-cdk/aws-batch@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudformation@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudwatch@${AWSCDK_VERSION} \
   @aws-cdk/aws-ec2@${AWSCDK_VERSION} \
   @aws-cdk/aws-ecs@${AWSCDK_VERSION} \
+  @aws-cdk/aws-elasticloadbalancingv2${AWSCDK_VERSION} \
   @aws-cdk/aws-events@${AWSCDK_VERSION} \
   @aws-cdk/aws-iam@${AWSCDK_VERSION} \
   @aws-cdk/aws-s3@${AWSCDK_VERSION} \
