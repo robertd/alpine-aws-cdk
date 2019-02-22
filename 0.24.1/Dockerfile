@@ -24,6 +24,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudformation@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudwatch@${AWSCDK_VERSION} \
   @aws-cdk/aws-ec2@${AWSCDK_VERSION} \
+  @aws-cdk/aws-efs@${AWSCDK_VERSION} \
   @aws-cdk/aws-ecs@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticloadbalancingv2@${AWSCDK_VERSION} \
   @aws-cdk/aws-events@${AWSCDK_VERSION} \
@@ -33,4 +34,6 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-sqs@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda-event-sources@${AWSCDK_VERSION} \
-  @aws-cdk/aws-logs@${AWSCDK_VERSION}
+  @aws-cdk/aws-logs@${AWSCDK_VERSION} \
+  typescript@latest \
+  @types/node@latest
