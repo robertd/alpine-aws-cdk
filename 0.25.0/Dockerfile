@@ -6,7 +6,7 @@ ENV AWSCDK_VERSION 0.25.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update \
-  python3 python3-dev
+  python3 python3-dev git
 
 #pip3 needs to be run initialy to upgrade pip
 RUN pip3 install --upgrade pip
