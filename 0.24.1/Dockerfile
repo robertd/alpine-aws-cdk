@@ -22,6 +22,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-autoscaling@${AWSCDK_VERSION} \
   @aws-cdk/aws-batch@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudformation@${AWSCDK_VERSION} \
+  @aws-cdk/aws-cloudfront@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudwatch@${AWSCDK_VERSION} \
   @aws-cdk/aws-ec2@${AWSCDK_VERSION} \
   @aws-cdk/aws-efs@${AWSCDK_VERSION} \
