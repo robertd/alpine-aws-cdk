@@ -10,6 +10,7 @@ This is a great base image for running aws-cdk in CI/CD environments.
 - [`0.26.0`,`0.26`](https://github.com/robertd/alpine-aws-cdk/blob/master/0.26.0/Dockerfile)
 - [`0.27.0`,`0.27`](https://github.com/robertd/alpine-aws-cdk/blob/master/0.27.0/Dockerfile)
 - [`0.28.0`,`0.28`](https://github.com/robertd/alpine-aws-cdk/blob/master/0.28.0/Dockerfile)
+- [`0.29.0`,`0.29`](https://github.com/robertd/alpine-aws-cdk/blob/master/0.29.0/Dockerfile)
 
 
 ### Supported Docker versions
