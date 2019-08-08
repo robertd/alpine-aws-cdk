@@ -36,5 +36,6 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda-event-sources@${AWSCDK_VERSION} \
   @aws-cdk/aws-logs@${AWSCDK_VERSION} \
+  @aws-cdk/aws-cognito@${AWSCDK_VERSION} \
   typescript@latest \
   @types/node@latest
