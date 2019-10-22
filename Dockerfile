@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.13.1
+ENV AWSCDK_VERSION 1.14.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git
