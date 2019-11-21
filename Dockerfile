@@ -36,5 +36,33 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-lambda-event-sources@${AWSCDK_VERSION} \
   @aws-cdk/aws-logs@${AWSCDK_VERSION} \
   @aws-cdk/aws-cognito@${AWSCDK_VERSION} \
+  @aws-cdk/aws-applicationautoscaling@${AWSCDK_VERSION} \
+  @aws-cdk/aws-autoscaling-common@${AWSCDK_VERSION} \
+  @aws-cdk/aws-autoscaling-hooktargets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-certificatemanager@${AWSCDK_VERSION} \
+  @aws-cdk/aws-codebuild@${AWSCDK_VERSION} \
+  @aws-cdk/aws-codecommit@${AWSCDK_VERSION} \
+  @aws-cdk/aws-codepipeline@${AWSCDK_VERSION} \
+  @aws-cdk/aws-dynamodb@${AWSCDK_VERSION} \
+  @aws-cdk/aws-ecr@${AWSCDK_VERSION} \
+  @aws-cdk/aws-ecr-assets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-elasticloadbalancing@${AWSCDK_VERSION} \
+  @aws-cdk/aws-events-targets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-kinesis@${AWSCDK_VERSION} \
+  @aws-cdk/aws-kms@${AWSCDK_VERSION} \
+  @aws-cdk/aws-route53@${AWSCDK_VERSION} \
+  @aws-cdk/aws-route53-targets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-s3-assets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-s3-deployment@${AWSCDK_VERSION} \
+  @aws-cdk/aws-s3-notifications@${AWSCDK_VERSION} \
+  @aws-cdk/aws-secretsmanager@${AWSCDK_VERSION} \
+  @aws-cdk/aws-servicediscovery@${AWSCDK_VERSION} \
+  @aws-cdk/aws-sns-subscriptions@${AWSCDK_VERSION} \
+  @aws-cdk/aws-ssm@${AWSCDK_VERSION} \
+  @aws-cdk/aws-stepfunctions@${AWSCDK_VERSION} \
+  @aws-cdk/assets@${AWSCDK_VERSION} \
+  @aws-cdk/core@${AWSCDK_VERSION} \
+  @aws-cdk/cx-api@${AWSCDK_VERSION} \
+  @aws-cdk/region-info@${AWSCDK_VERSION} \
   typescript@latest \
   @types/node@latest
