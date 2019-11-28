@@ -24,6 +24,16 @@ If the current directory contains a CDK App:
 docker run --rm -v $(pwd):/app -w /app robertd/alpine-aws-cdk /bin/sh -c 'cdk synth'
 ```
 
+If you want to synthesize all stacks in a TypeScript based CDK application:
+
+```sh
+docker run --rm -it -v $(pwd):/app -w /app \
+  -e AWS_DEFAULT_REGION=<your_aws_region> \
+  -e AWS_ACCESS_KEY_ID=<your_access_key_id> \
+  -e AWS_SECRET_ACCESS_KEY=<your_secret_access_key> \
+  robertd/alpine-aws-cdk /bin/sh -c "cdk --app 'npx ts-node bin/lambda-edge-multi-stack.ts' synth '*'"
+```
+
 ### Deploy a CDK stack with local AWS configuration
 
 Deploy the stack using the local default AWS environment:
