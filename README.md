@@ -24,6 +24,16 @@ If the current directory contains a CDK App:
 docker run --rm -v $(pwd):/app -w /app robertd/alpine-aws-cdk /bin/sh -c 'cdk synth'
 ```
 
+If you want to synthesize all stacks in a TypeScript based CDK multi stack application:
+
+```sh
+docker run --rm -it -v $(pwd):/app -w /app \
+  -e AWS_DEFAULT_REGION=<your_aws_region> \
+  -e AWS_ACCESS_KEY_ID=<your_access_key_id> \
+  -e AWS_SECRET_ACCESS_KEY=<your_secret_access_key> \
+  robertd/alpine-aws-cdk /bin/sh -c "cdk --app 'npx ts-node bin/cdk-app-multi-stack.ts' synth '*'"
+```
+
 ### Deploy a CDK stack with local AWS configuration
 
 Deploy the stack using the local default AWS environment:
@@ -35,7 +45,7 @@ docker run --rm -v $(pwd):/app -v ~/.aws/:/root/.aws -w /app robertd/alpine-aws-
 If you set the `--require-approval` option to `never` in the `cdk.json`file  and
 CDK detects security-sensitive elements in the stack you will get the following warning and need to use the `-it` docker option for an interactive session:
 
-> "--require-approval" is enabled and stack includes security-sensitive > updates, but terminal (TTY) is not attached so we are unable to get a > confirmation from the user
+> "--require-approval" is enabled and stack includes security-sensitive updates, but terminal (TTY) is not attached so we are unable to get a confirmation from the user
 
 This also exposes all credentials stored in your AWS configuration.
 To avoid this inject an AWS environment explicitely by exporting an access key id, the corresponding secret and a region:
