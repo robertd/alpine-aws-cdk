@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.23.0
+ENV AWSCDK_VERSION 1.24.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git
@@ -26,6 +26,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-amplify@${AWSCDK_VERSION} \
   @aws-cdk/aws-apigateway@${AWSCDK_VERSION} \
   @aws-cdk/aws-apigatewayv2@${AWSCDK_VERSION} \
+  @aws-cdk/aws-appconfig@${AWSCDK_VERSION} \
   @aws-cdk/aws-applicationautoscaling@${AWSCDK_VERSION} \
   @aws-cdk/aws-appmesh@${AWSCDK_VERSION} \
   @aws-cdk/aws-appstream@${AWSCDK_VERSION} \
