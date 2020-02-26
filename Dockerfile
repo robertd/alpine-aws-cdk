@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.25.0
+ENV AWSCDK_VERSION 1.26.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git
@@ -81,6 +81,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-events@${AWSCDK_VERSION} \
   @aws-cdk/aws-events-targets@${AWSCDK_VERSION} \
   @aws-cdk/aws-eventschemas@${AWSCDK_VERSION} \
+  @aws-cdk/aws-fms@${AWSCDK_VERSION} \
   @aws-cdk/aws-fsx@${AWSCDK_VERSION} \
   @aws-cdk/aws-gamelift@${AWSCDK_VERSION} \
   @aws-cdk/aws-glue@${AWSCDK_VERSION} \
