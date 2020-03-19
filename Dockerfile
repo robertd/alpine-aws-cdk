@@ -2,10 +2,10 @@ FROM node:alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.27.0
+ENV AWSCDK_VERSION 1.28.0
 
 RUN apk update && apk upgrade
-RUN apk add --no-cache --update python3 python3-dev git
+RUN apk add --no-cache --update python3 python3-dev git jq
 
 #pip3 needs to be run initialy to upgrade pip
 RUN pip3 install --upgrade pip

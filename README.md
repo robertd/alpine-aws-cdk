@@ -1,4 +1,4 @@
-# Minimal AWSCLI & [AWS-CDK](https://github.com/aws/aws-cdk) & NodeJS/NPM/Yarn built on top of Alpine Linux Docker Image
+# Minimal [AWS-CLI](https://github.com/aws/aws-cli) & [AWS-CDK](https://github.com/aws/aws-cdk) & NodeJS/NPM/Yarn built on top of Alpine Linux Docker Image
 
 This is a great base image for running aws-cdk in CI/CD environments.
 
