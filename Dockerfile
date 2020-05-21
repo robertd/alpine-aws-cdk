@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.40.0
+ENV AWSCDK_VERSION 1.41.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git jq
@@ -39,7 +39,10 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-backup@${AWSCDK_VERSION} \
   @aws-cdk/aws-batch@${AWSCDK_VERSION} \
   @aws-cdk/aws-budgets@${AWSCDK_VERSION} \
+  @aws-cdk/aws-cassandra@${AWSCDK_VERSION} \
+  @aws-cdk/aws-ce@${AWSCDK_VERSION} \
   @aws-cdk/aws-certificatemanager@${AWSCDK_VERSION} \
+  @aws-cdk/aws-chatbot@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloud9@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudformation@${AWSCDK_VERSION} \
   @aws-cdk/aws-cloudfront@${AWSCDK_VERSION} \
@@ -49,20 +52,22 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-codebuild@${AWSCDK_VERSION} \
   @aws-cdk/aws-codecommit@${AWSCDK_VERSION} \
   @aws-cdk/aws-codedeploy@${AWSCDK_VERSION} \
+  @aws-cdk/aws-codeguruprofiler@${AWSCDK_VERSION} \
   @aws-cdk/aws-codepipeline@${AWSCDK_VERSION} \
   @aws-cdk/aws-codepipeline-actions@${AWSCDK_VERSION} \
   @aws-cdk/aws-codestar@${AWSCDK_VERSION} \
+  @aws-cdk/aws-codestarconnections@${AWSCDK_VERSION} \
   @aws-cdk/aws-codestarnotifications@${AWSCDK_VERSION} \
   @aws-cdk/aws-cognito@${AWSCDK_VERSION} \
   @aws-cdk/aws-config@${AWSCDK_VERSION} \
   @aws-cdk/aws-datapipeline@${AWSCDK_VERSION} \
   @aws-cdk/aws-dax@${AWSCDK_VERSION} \
+  @aws-cdk/aws-detective@${AWSCDK_VERSION} \
   @aws-cdk/aws-directoryservice@${AWSCDK_VERSION} \
   @aws-cdk/aws-dlm@${AWSCDK_VERSION} \
   @aws-cdk/aws-dms@${AWSCDK_VERSION} \
   @aws-cdk/aws-docdb@${AWSCDK_VERSION} \
   @aws-cdk/aws-dynamodb@${AWSCDK_VERSION} \
-  @aws-cdk/aws-dynamodb-global@${AWSCDK_VERSION} \
   @aws-cdk/aws-ec2@${AWSCDK_VERSION} \
   @aws-cdk/aws-ecr@${AWSCDK_VERSION} \
   @aws-cdk/aws-ecr-assets@${AWSCDK_VERSION} \
@@ -75,6 +80,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticbeanstalk@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticloadbalancing@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticloadbalancingv2@${AWSCDK_VERSION} \
+  @aws-cdk/aws-elasticloadbalancingv2-actions@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticloadbalancingv2-targets@${AWSCDK_VERSION} \
   @aws-cdk/aws-elasticsearch@${AWSCDK_VERSION} \
   @aws-cdk/aws-emr@${AWSCDK_VERSION} \
@@ -111,6 +117,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-mediastore@${AWSCDK_VERSION} \
   @aws-cdk/aws-msk@${AWSCDK_VERSION} \
   @aws-cdk/aws-neptune@${AWSCDK_VERSION} \
+  @aws-cdk/aws-networkmanager@${AWSCDK_VERSION} \
   @aws-cdk/aws-opsworks@${AWSCDK_VERSION} \
   @aws-cdk/aws-opsworkscm@${AWSCDK_VERSION} \
   @aws-cdk/aws-pinpoint@${AWSCDK_VERSION} \
@@ -119,6 +126,7 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-ram@${AWSCDK_VERSION} \
   @aws-cdk/aws-rds@${AWSCDK_VERSION} \
   @aws-cdk/aws-redshift@${AWSCDK_VERSION} \
+  @aws-cdk/aws-resourcegroups@${AWSCDK_VERSION} \
   @aws-cdk/aws-robomaker@${AWSCDK_VERSION} \
   @aws-cdk/aws-route53@${AWSCDK_VERSION} \
   @aws-cdk/aws-route53-patterns@${AWSCDK_VERSION} \
@@ -143,13 +151,17 @@ RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/aws-ssm@${AWSCDK_VERSION} \
   @aws-cdk/aws-stepfunctions@${AWSCDK_VERSION} \
   @aws-cdk/aws-stepfunctions-tasks@${AWSCDK_VERSION} \
+  @aws-cdk/aws-synthetics@${AWSCDK_VERSION} \
   @aws-cdk/aws-transfer@${AWSCDK_VERSION} \
   @aws-cdk/aws-waf@${AWSCDK_VERSION} \
   @aws-cdk/aws-wafregional@${AWSCDK_VERSION} \
   @aws-cdk/aws-wafv2@${AWSCDK_VERSION} \
   @aws-cdk/aws-workspaces@${AWSCDK_VERSION} \
+  @aws-cdk/cdk-assets-schema@${AWSCDK_VERSION} \
   @aws-cdk/cfnspec@${AWSCDK_VERSION} \
+  @aws-cdk/cloud-assembly-schema@${AWSCDK_VERSION} \
   @aws-cdk/cloudformation-diff@${AWSCDK_VERSION} \
+  @aws-cdk/cloudformation-include@${AWSCDK_VERSION} \
   @aws-cdk/core@${AWSCDK_VERSION} \
   @aws-cdk/custom-resources@${AWSCDK_VERSION} \
   @aws-cdk/cx-api@${AWSCDK_VERSION} \
