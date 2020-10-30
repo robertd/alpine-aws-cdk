@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION 1.69.0
+ENV AWSCDK_VERSION 1.70.0
 
 RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git jq
