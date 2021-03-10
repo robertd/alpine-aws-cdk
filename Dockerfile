@@ -43,6 +43,7 @@ RUN apk --no-cache add \
     && rm glibc-bin-${GLIBC_VER}.apk \
     && rm -rf /var/cache/apk/*
 
+RUN npm i -g npm
 RUN npm i -g aws-cdk@${AWSCDK_VERSION} \
   @aws-cdk/alexa-ask@${AWSCDK_VERSION} \
   @aws-cdk/app-delivery@${AWSCDK_VERSION} \
