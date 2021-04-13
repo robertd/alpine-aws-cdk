@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION=1.95.2
+ENV AWSCDK_VERSION=1.97.0
 ENV GLIBC_VER=2.33-r0
 # override aws-cli v2 default pager
 ENV AWS_PAGER=""
