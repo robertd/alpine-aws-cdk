@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION=1.129.0
+ENV AWSCDK_VERSION=1.130.0
 ENV GLIBC_VER=2.34-r0
 # override aws-cli v2 default pager
 ENV AWS_PAGER=""
@@ -11,6 +11,7 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache --update python3 python3-dev git jq
 
 #pip3 needs to be run initialy to upgrade pip
+RUN python3 -m ensurepip
 RUN pip3 install --upgrade pip
 RUN pip3 install boto3 \
   json-spec \
