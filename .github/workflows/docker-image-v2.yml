@@ -3,7 +3,9 @@ name: Build Docker Image
 on:
   push:
     tags:
-      - '*'
+      - 2.*
+    paths:
+      - 'Dockerfile.v2'
 
 jobs:
   dockerize:
@@ -17,5 +19,6 @@ jobs:
         image: robertd/alpine-aws-cdk
         tags: ${GITHUB_REF##*/}, latest
         registry: docker.io
+        dockerfile: Dockerfile.v1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
