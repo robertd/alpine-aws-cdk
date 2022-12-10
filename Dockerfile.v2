@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL maintainer="robertd"
 
-ENV AWSCDK_VERSION=2.51.1
+ENV AWSCDK_VERSION=2.54.0
 ENV GLIBC_VER=2.34-r0
 # override aws-cli v2 default pager
 ENV AWS_PAGER=""
@@ -25,7 +25,7 @@ RUN apk --no-cache add \
     && curl -sL https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub \
     && curl -sLO https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-${GLIBC_VER}.apk \
     && curl -sLO https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk \
-    && apk add --no-cache \
+    && apk add --force-overwrite --no-cache \
         glibc-${GLIBC_VER}.apk \
         glibc-bin-${GLIBC_VER}.apk \
     && curl -sL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip \
